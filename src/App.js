@@ -1,32 +1,27 @@
-import './App.css';
-import Employee from './Components/Employee';
-import { useState } from 'react';
+import './index.css';
+import Header from './Components/Header';
+import Employees from './Pages/Employees';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Dictionary from './Pages/Dictionary';
+import Definition from './Pages/Definition';
 
 function App() {
-  const [role, setRole] = useState('dev');
-  const showEmployees = true;
+  
+//  in a real react app, our entire website should be sorrounded with the header
+// route is used to allow different url paths to go to different pages in our application
   return (
-    <div className="App">
-      
-      {showEmployees ? (
-        <>
-
-          <input type="text" onChange={(e) => {
-            console.log(e.target.value);
-            setRole(e.target.value);
-          }}
-          />
-          <Employee name='Ayodeji'role = {role}/>
-          <Employee name='John' role='Software Engineer'/>
-          <Employee name='Sunday'/>
-          <Employee name='Johnnyz'/>
-          <Employee />
-        </>
-       ) : (
-        <p>You cannot see the employees</p>
-      )}
-    </div>
+    <BrowserRouter>
+      <Header>
+        <Routes>
+          <Route path="/employees" element={<Employees />} />
+          <Route path='/dictionary' element= {<Dictionary />} />          
+          {/* <Route path='/definition' element= {<Definition />} />           */}
+          <Route path='/definition/:search' element= {<Definition />} />          
+        </Routes>
+      </Header> 
+    </BrowserRouter>
   );
-}
+   
+} 
 
 export default App;
