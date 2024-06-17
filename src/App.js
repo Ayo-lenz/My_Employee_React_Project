@@ -14,7 +14,7 @@ function App() {
       <Header>
         <Routes>
           <Route path="/My_Employee_React_Project/" element={<Employees />} />
-          <Route path="/My_Employee_React_Project/employees" element={<Employees />} />
+          
           <Route path='/My_Employee_React_Project/dictionary' element= {<Dictionary />} />          
           {/* <Route path='/definition' element= {<Definition />} />           */}
           <Route path='/My_Employee_React_Project/definition/:search' element= {<Definition />} />          
