@@ -37,7 +37,7 @@ export default function Dictionary() {
       />
       <h2>What's the definition for {word2}</h2> */}
       <button onClick={ () => {
-        navigate('/My_Employee_React_Project/definition/' + word)
+        navigate('/definition/' + word)
       }}>Search</button>
       
     </>

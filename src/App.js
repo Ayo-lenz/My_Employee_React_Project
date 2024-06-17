@@ -13,11 +13,12 @@ function App() {
     <BrowserRouter basename='/My_Employee_React_Project/'>
       <Header>
         <Routes>
-          <Route path="/My_Employee_React_Project/" element={<Employees />} />
+          <Route path="/" element={<Employees />} />
+          <Route path="/Employees" element={<Employees />} />
           
-          <Route path='/My_Employee_React_Project/dictionary' element= {<Dictionary />} />          
+          <Route path='/Dictionary' element= {<Dictionary />} />          
           {/* <Route path='/definition' element= {<Definition />} />           */}
-          <Route path='/My_Employee_React_Project/definition/:search' element= {<Definition />} />          
+          <Route path='/definition/:search' element= {<Definition />} />          
         </Routes>
       </Header> 
     </BrowserRouter>
