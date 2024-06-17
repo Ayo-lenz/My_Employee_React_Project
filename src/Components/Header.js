@@ -32,8 +32,8 @@ function Header(props) {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="/My_Employee_React_Project/employees">Employees</Nav.Link>
-              <Nav.Link href="/My_Employee_React_Project/dictionary">Dictionary</Nav.Link>
+              <Nav.Link href="/">Employees</Nav.Link>
+              <Nav.Link href="/dictionary">Dictionary</Nav.Link>
               <NavDropdown title="Link" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
