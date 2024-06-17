@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Employees />} />
           <Route path='/dictionary' element= {<Dictionary />} />          
           {/* <Route path='/definition' element= {<Definition />} />           */}
-          <Route path='/My_Employee_React_Project/definition/:search' element= {<Definition />} />          
+          <Route path='/definition/:search' element= {<Definition />} />          
         </Routes>
       </Header> 
     </BrowserRouter>
