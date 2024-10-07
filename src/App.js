@@ -10,7 +10,7 @@ function App() {
 //  in a real react app, our entire website should be sorrounded with the header
 // route is used to allow different url paths to go to different pages in our application
   return (
-    <BrowserRouter basename='/My_Employee_React_Project/'>
+    <BrowserRouter basename=''>
       <Header>
         <Routes>
           <Route path="/" element={<Employees />} />

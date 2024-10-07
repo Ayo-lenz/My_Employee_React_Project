@@ -19,13 +19,23 @@ export default function Dictionary() {
 
   return (
     <>
+      <form action="" 
+        className="flex justify-center space-x-2 max-w-[300px]"
+        onSubmit={ () => {
+          navigate('/definition/' + word)
+        }}
+        >
+
       <input 
-        className="bg-primary"
+        className="rounded px-3 bg-gray-100 py-2 shrink min-w-0"
+        placeholder="Chemical"
         type="text" 
         onChange={(e) => {
         setWord(e.target.value);
-        }} 
+      }} 
       />
+      <button className=" bg-purple-600 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 rounded">Search</button>
+      </form>
       
       {/* <h2>What's the definition for {word}</h2>
       <input 
@@ -36,9 +46,6 @@ export default function Dictionary() {
         }} 
       />
       <h2>What's the definition for {word2}</h2> */}
-      <button onClick={ () => {
-        navigate('/definition/' + word)
-      }}>Search</button>
       
     </>
   )
